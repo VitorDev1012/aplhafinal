@@ -305,8 +305,9 @@ function filterListingsData() {
     // Ordenação
     if (sort === 'price-asc') {
         filtered.sort((a, b) => a.price - b.price);
-    } else if (sort === 'price-desc') {
-        filtered.sort((a, b) => b.price - b.price); // Correção: b.price - a.price
+   // Correção
+} else if (sort === 'price-desc') {
+    filtered.sort((a, b) => b.price - a.price); // <-- CORRIGIDO
     } else if (sort === 'newest') {
         // A ordem do CSV já é a padrão
     }
